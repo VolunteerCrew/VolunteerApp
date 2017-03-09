@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "834300013021",
+    "firebase_url": "https://volunteer-meetup-app.firebaseio.com",
+    "project_id": "volunteer-meetup-app",
+    "storage_bucket": "volunteer-meetup-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834300013021:android:dc2f0e65e9415e25",
+        "android_client_info": {
+          "package_name": "com.example.cc_3.volunteerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834300013021-jmj315ki63saa1nahbvl79du0ul6uv9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDejyClSLdq1MJjH0EzAATz3bT5ziqV3Ho"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
