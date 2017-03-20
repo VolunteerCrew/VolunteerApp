@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VolunteerApp</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="comm_service_label">Community Service</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.cc_3.volunteerapp;
 
 import android.content.Intent;
+import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,9 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 123;
+
+    private FragmentTransaction mFragmentTransaction;
+    private HomeFragment mHomeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
                     AuthUI.getInstance().createSignInIntentBuilder().build(),
                     RC_SIGN_IN);
         }
+
+        mHomeFragment = new HomeFragment();
+
+        mFragmentTransaction = getFragmentManager().beginTransaction();
+        mFragmentTransaction.replace(R.id.fragment_container, mHomeFragment);
+        mFragmentTransaction.commit();
     }
 
     /**
