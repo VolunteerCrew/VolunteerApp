@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentTransaction mFragmentTransaction;
     private HomeFragment mHomeFragment;
+    private CommunityServiceFragment mCommunityFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,5 +78,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    public void goToCommService() {
+
+        mFragmentTransaction.replace(R.id.fragment_container, mCommunityFragment);
+        mFragmentTransaction.commit();
+
     }
 }
