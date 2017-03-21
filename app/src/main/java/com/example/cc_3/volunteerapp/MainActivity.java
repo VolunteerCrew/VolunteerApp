@@ -12,10 +12,13 @@ import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.ResultCodes;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 123;
+
+    public FirebaseDatabase mDatabase;
 
     private FragmentTransaction mFragmentTransaction;
     private HomeFragment mHomeFragment;
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance();
+
         // This checks to see if someone is logged in.
         if (auth.getCurrentUser() != null) {
             // already signed in
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mHomeFragment = new HomeFragment();
+        mCommunityFragment = new CommunityServiceFragment();
 
         mFragmentTransaction = getFragmentManager().beginTransaction();
         mFragmentTransaction.replace(R.id.fragment_container, mHomeFragment);
@@ -82,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToCommService() {
 
+        mFragmentTransaction = getFragmentManager().beginTransaction();
         mFragmentTransaction.replace(R.id.fragment_container, mCommunityFragment);
         mFragmentTransaction.commit();
 
