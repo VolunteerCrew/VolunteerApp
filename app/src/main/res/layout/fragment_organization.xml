@@ -11,15 +11,16 @@
         -->
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_new_opportunity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:clickable="true"
+        app:backgroundTint="@color/colorAccent"
         app:fabSize="mini"
-        app:srcCompat="@color/colorAccent"
-        android:id="@+id/add_new_service"/>
+        app:srcCompat="@color/colorAccent" />
 
 </RelativeLayout>

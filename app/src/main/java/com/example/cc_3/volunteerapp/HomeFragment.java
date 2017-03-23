@@ -14,7 +14,7 @@ import android.widget.Button;
 
 public class HomeFragment extends Fragment {
 
-    Button mCommBtn;
+    Button mOrganizaitonBtn;
     Button mGrassrootsBtn;
     Button mSportsBtn;
 
@@ -24,11 +24,11 @@ public class HomeFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        mCommBtn = (Button) rootView.findViewById(R.id.comm_service_btn);
+        mOrganizaitonBtn = (Button) rootView.findViewById(R.id.organization_btn);
         mGrassrootsBtn = (Button) rootView.findViewById(R.id.grass_btn);
         mSportsBtn = (Button) rootView.findViewById(R.id.sport_btn);
 
-        mCommBtn.setOnClickListener(new BtnListener());
+        mOrganizaitonBtn.setOnClickListener(new BtnListener());
         mGrassrootsBtn.setOnClickListener(new BtnListener());
         mSportsBtn.setOnClickListener(new BtnListener());
 
@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
 
             int buttonID = v.getId();
 
-            if (buttonID == R.id.comm_service_btn) {
+            if (buttonID == R.id.organization_btn) {
                 ((MainActivity) getActivity()).goToCommService();
             } else if (buttonID == R.id.grass_btn) {
                 // TODO:

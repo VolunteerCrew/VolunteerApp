@@ -7,26 +7,26 @@ import java.util.Map;
  * Created by johnborden on 3/20/17.
  */
 
-public class CommServiceModel {
+public class OppDataModel {
 
     public String sponsor;
     public String address;
     public String phoneNumber;
-    public String desc;
+    public String description;
     public String dateCreated;
     public String dateExpires;
 
-    public CommServiceModel() {
+    public OppDataModel() {
 
     }
 
-    public CommServiceModel(String sponsor, String address, String phoneNumber,
-                            String desc, String dateCreated, String dateExpires) {
+    public OppDataModel(String sponsor, String address, String phoneNumber,
+                        String description, String dateCreated, String dateExpires) {
 
         this.sponsor = sponsor;
         this.address = address;
         this.phoneNumber = phoneNumber;
-        this.desc = desc;
+        this.description = description;
         this.dateCreated = dateCreated;
         this.dateExpires = dateExpires;
 
@@ -38,7 +38,7 @@ public class CommServiceModel {
         result.put("sponsor", sponsor);
         result.put("address", address);
         result.put("phoneNumber", phoneNumber);
-        result.put("desc", desc);
+        result.put("description", description);
         result.put("dateCreated", dateCreated);
         result.put("dateExpires", dateExpires);
         return result;

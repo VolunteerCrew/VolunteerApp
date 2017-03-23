@@ -15,7 +15,7 @@ import java.util.Map;
  * Created by johnborden on 3/20/17.
  */
 
-public class CommunityServiceFragment extends Fragment {
+public class OrganizationFragment extends Fragment {
 
     FloatingActionButton mAddButton;
 
@@ -23,7 +23,7 @@ public class CommunityServiceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_community_service, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_organization, container, false);
 
         mAddButton = (FloatingActionButton) rootView.findViewById(R.id.add_new_service);
 
@@ -33,7 +33,7 @@ public class CommunityServiceFragment extends Fragment {
 
                 String key = ((MainActivity) getActivity()).mDatabase.getReference().push().getKey();
 
-                CommServiceModel commService = new CommServiceModel(
+                OppDataModel commData = new OppDataModel(
                         "WWF",
                         "123 Happy Times Lane",
                         "575-914-1826",
@@ -42,16 +42,16 @@ public class CommunityServiceFragment extends Fragment {
                         "The Day After Tomorrow"
                 );
 
-                Map<String, Object> commValues = commService.toMap();
+                Map<String, Object> commValues = commData.toMap();
 
                 Map<String, Object> childUpdates = new HashMap<>();
-                childUpdates.put("/community-service/" + key, commValues);
+                childUpdates.put("/organization/" + key, commValues);
+                ((MainActivity) getActivity()).mDatabase.getReference()
+                        .updateChildren(childUpdates);
 
                 // These two below are just left behind as examples
                 //childUpdates.put("/grassroots/" + key, commValues);
                 //childUpdates.put("/sports-events/" + key, commValues);
-
-                ((MainActivity) getActivity()).mDatabase.getReference().updateChildren(childUpdates);
 
             }
         });

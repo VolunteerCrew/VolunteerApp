@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentTransaction mFragmentTransaction;
     private HomeFragment mHomeFragment;
-    private CommunityServiceFragment mCommunityFragment;
+    private OrganizationFragment mCommunityFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mHomeFragment = new HomeFragment();
-        mCommunityFragment = new CommunityServiceFragment();
+        mCommunityFragment = new OrganizationFragment();
 
         mFragmentTransaction = getFragmentManager().beginTransaction();
         mFragmentTransaction.replace(R.id.fragment_container, mHomeFragment);
