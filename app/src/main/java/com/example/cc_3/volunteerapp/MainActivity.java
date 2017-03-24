@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentTransaction mFragmentTransaction;
     private HomeFragment mHomeFragment;
-    private OrganizationFragment mCommunityFragment;
+    private OrganizationFragment mOrganizationFragment;
+    private GrassrootsFragment mGrassrootsFragment;
+    private SportsFragment mSportsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mHomeFragment = new HomeFragment();
-        mCommunityFragment = new OrganizationFragment();
+        mOrganizationFragment = new OrganizationFragment();
+        mGrassrootsFragment = new GrassrootsFragment();
+        mSportsFragment = new SportsFragment();
 
         mFragmentTransaction = getFragmentManager().beginTransaction();
         mFragmentTransaction.replace(R.id.fragment_container, mHomeFragment);
@@ -85,11 +89,25 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void goToCommService() {
+    public void goToOrganization() {
 
         mFragmentTransaction = getFragmentManager().beginTransaction();
-        mFragmentTransaction.replace(R.id.fragment_container, mCommunityFragment);
+        mFragmentTransaction.replace(R.id.fragment_container, mOrganizationFragment);
         mFragmentTransaction.commit();
 
+    }
+
+    public void goToGrassroots() {
+
+        mFragmentTransaction = getFragmentManager().beginTransaction();
+        mFragmentTransaction.replace(R.id.fragment_container, mGrassrootsFragment);
+        mFragmentTransaction.commit();
+    }
+
+    public void goToSports() {
+
+        mFragmentTransaction = getFragmentManager().beginTransaction();
+        mFragmentTransaction.replace(R.id.fragment_container, mSportsFragment);
+        mFragmentTransaction.commit();
     }
 }
