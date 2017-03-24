@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 123;
+    public static final int NEW_ENTRY_ACTIVITY_CODE = 3;
 
     public FirebaseDatabase mDatabase;
 

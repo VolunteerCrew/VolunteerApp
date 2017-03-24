@@ -1,6 +1,7 @@
 package com.example.cc_3.volunteerapp;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -31,6 +32,12 @@ public class OrganizationFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                // Transition to the NewEntryActivity
+                Intent intent = new Intent(getActivity(), NewEntryActivity.class);
+                int requestCode = ((MainActivity) getActivity()).NEW_ENTRY_ACTIVITY_CODE;
+                startActivityForResult(intent, requestCode);
+
+                /*
                 String key = ((MainActivity) getActivity()).mDatabase.getReference().push().getKey();
 
                 OppDataModel commData = new OppDataModel(
@@ -53,6 +60,7 @@ public class OrganizationFragment extends Fragment {
                 // These two below are just left behind as examples
                 //childUpdates.put("/grassroots/" + key, commValues);
                 //childUpdates.put("/sports-events/" + key, commValues);
+                */
 
             }
         });
