@@ -10,7 +10,7 @@ import java.util.Map;
 public class OppDataModel {
 
     public String sponsor;
-    public String name;
+    public String title;
     public String address;
     public String phoneNumber;
     public String description;
@@ -21,11 +21,11 @@ public class OppDataModel {
 
     }
 
-    public OppDataModel(String sponsor, String name, String address, String phoneNumber,
+    public OppDataModel(String sponsor, String title, String address, String phoneNumber,
                         String description, String dateCreated, String dateExpires) {
 
         this.sponsor = sponsor;
-        this.name = name;
+        this.title = title;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.description = description;
@@ -38,7 +38,7 @@ public class OppDataModel {
         HashMap<String, Object> result = new HashMap<>();
 
         result.put("sponsor", sponsor);
-        result.put("name", name);
+        result.put("title", title);
         result.put("address", address);
         result.put("phoneNumber", phoneNumber);
         result.put("description", description);
