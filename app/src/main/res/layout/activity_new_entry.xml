@@ -1,108 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/activity_horizontal_margin"
-    tools:context="com.example.cc_3.volunteerapp.NewEntryActivity"
-    android:orientation="vertical">
+    tools:context="com.example.cc_3.volunteerapp.NewEntryActivity">
 
-    <!-- This is for Sponsors -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sponsor_name"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sponsor_field"
-        android:hint="@string/sponsor_name"/>
+        <!-- This is for Sponsors -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sponsor_name"/>
 
-    <!-- This is for Opp Title -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/title_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sponsor_field"
+            android:hint="@string/sponsor_name"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/title_field"
-        android:hint="@string/title_name"/>
+        <!-- This is for Opp Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_name"/>
 
-    <!-- This is for Description -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/desc_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_field"
+            android:hint="@string/title_name"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/desc_field"
-        android:inputType="textMultiLine"
-        android:hint="@string/desc_name"/>
+        <!-- This is for Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_name"/>
 
-    <!-- This is for Address -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/addr_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/desc_field"
+            android:inputType="textMultiLine"
+            android:hint="@string/desc_name"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addr_field"
-        android:inputType="textPostalAddress"
-        android:hint="@string/addr_name"/>
+        <!-- This is for Address -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addr_name"/>
 
-    <!-- This is for Phone -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/phone_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addr_field"
+            android:inputType="textPostalAddress"
+            android:hint="@string/addr_name"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/phone_field"
-        android:inputType="phone"
-        android:hint="@string/phone_name"/>
+        <!-- This is for Phone -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_name"/>
 
-    <!-- This is for Created by Date -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/created_field"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_field"
+            android:inputType="phone"
+            android:hint="@string/phone_name"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/created"
-        android:inputType="date"
-        android:hint="@string/created_field"/>
+        <!-- This is for Created by Date -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/created_field"/>
 
-    <!-- This is for Created by Date -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/created_field"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/created"
+            android:inputType="date"
+            android:hint="@string/created_field"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/expires"
-        android:inputType="date"
-        android:hint="@string/expires_field"/>
+        <!-- This is for Created by Date -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/created_field"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/tw__solid_white"
-        android:id="@+id/upload_data"
-        android:text="@string/upload_button"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expires"
+            android:inputType="date"
+            android:hint="@string/expires_field"/>
 
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/tw__solid_white"
+            android:id="@+id/upload_data"
+            android:text="@string/upload_button"/>
+
+    </LinearLayout>
+
+</ScrollView>

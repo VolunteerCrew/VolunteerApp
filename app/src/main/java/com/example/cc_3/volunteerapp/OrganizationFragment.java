@@ -34,33 +34,12 @@ public class OrganizationFragment extends Fragment {
 
                 // Transition to the NewEntryActivity
                 Intent intent = new Intent(getActivity(), NewEntryActivity.class);
+                // Give it some extra data informing it which activity called it
+                // (And thus, where to upload data to).
+                intent.putExtra("FRAGMENT", OrganizationFragment.class.getSimpleName());
+
                 int requestCode = ((MainActivity) getActivity()).NEW_ENTRY_ACTIVITY_CODE;
                 startActivityForResult(intent, requestCode);
-
-                /*
-                String key = ((MainActivity) getActivity()).mDatabase.getReference().push().getKey();
-
-                OppDataModel commData = new OppDataModel(
-                        "Road Runner Food Bank",
-                        "Jared Long",
-                        "7801 Candelaria Rd NE",
-                        "575-914-1826",
-                        "Help with Food Drive at Sandia High School",
-                        "Tomorrow",
-                        "The Day After Tomorrow"
-                );
-
-                Map<String, Object> commValues = commData.toMap();
-
-                Map<String, Object> childUpdates = new HashMap<>();
-                childUpdates.put("/organization/" + key, commValues);
-                ((MainActivity) getActivity()).mDatabase.getReference()
-                        .updateChildren(childUpdates);
-
-                // These two below are just left behind as examples
-                //childUpdates.put("/grassroots/" + key, commValues);
-                //childUpdates.put("/sports-events/" + key, commValues);
-                */
 
             }
         });
