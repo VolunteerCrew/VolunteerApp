@@ -14,6 +14,7 @@ public class NewEntryActivity extends AppCompatActivity {
     private EditText mPhoneField;
     private EditText mDescriptionField;
     private EditText mCreatedField;
+    private EditText mExpiresField;
 
 
     private Button mUploadButton;
@@ -34,7 +35,7 @@ public class NewEntryActivity extends AppCompatActivity {
         mPhoneField = (EditText) findViewById(R.id.phone_field);
         mDescriptionField = (EditText) findViewById(R.id.desc_field);
         mCreatedField = (EditText) findViewById(R.id.created);
-
+        mExpiresField = (EditText) findViewById(R.id.expires);
 
         mUploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,7 @@ public class NewEntryActivity extends AppCompatActivity {
                 String phone = mPhoneField.getText().toString();
                 String description = mDescriptionField.getText().toString();
                 String created = mCreatedField.getText().toString();
+                String expires = mExpiresField.getText().toString();
 
                 OppDataModel commData = new OppDataModel(
                         sponsor,
@@ -54,7 +56,7 @@ public class NewEntryActivity extends AppCompatActivity {
                         phone,
                         description,
                         created,
-                        "The Day After Tomorrow"
+                        expires
                 );
 
             }

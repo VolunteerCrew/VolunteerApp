@@ -11,4 +11,5 @@
     <string name="addr_name">Address</string>
     <string name="phone_name">Phone Number</string>
     <string name="created_field">today\'s date</string>
+    <string name="expires_field">date expires</string>
 </resources>
