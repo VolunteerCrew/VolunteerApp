@@ -10,4 +10,5 @@
     <string name="desc_name">Description</string>
     <string name="addr_name">Address</string>
     <string name="phone_name">Phone Number</string>
+    <string name="created_field">today\'s date</string>
 </resources>

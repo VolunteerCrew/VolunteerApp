@@ -71,6 +71,19 @@
         android:inputType="phone"
         android:hint="@string/phone_name"/>
 
+    <!-- This is for Created by Date -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/created_field"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/created"
+        android:inputType="date"
+        android:hint="@string/created_field"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
