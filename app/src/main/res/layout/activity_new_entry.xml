@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorAccent"
         android:textColor="@color/tw__solid_white"
+        android:id="@+id/upload_data"
         android:text="@string/upload_button"/>
 
 </LinearLayout>
