@@ -49,7 +49,7 @@ public class NewEntryActivity extends AppCompatActivity {
         // Grabbing references to the EditTexts inside the layout
         mSponsorField = (EditText) findViewById(R.id.sponsor_field);
         mTitleField = (EditText) findViewById(R.id.title_field);
-        mAddressField = (EditText) findViewById(R.id.addr_field);
+        mAddressField = (EditText) findViewById(R.id.address_field);
         mPhoneField = (EditText) findViewById(R.id.phone_field);
         mDescriptionField = (EditText) findViewById(R.id.desc_field);
         mCreatedField = (EditText) findViewById(R.id.created);
