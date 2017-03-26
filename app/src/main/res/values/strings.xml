@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">VolunteerApp</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="organization_label">Organization</string>
+    <string name="grassroots_label">Grassroots</string>
+    <string name="sports_label">Sports Activities</string>
+    <string name="sponsor_name">Sponsor</string>
+    <string name="title_name">Title</string>
+    <string name="upload_button">Upload</string>
+    <string name="desc_name">Description</string>
+    <string name="addr_name">Address</string>
+    <string name="phone_name">Phone Number</string>
+    <string name="created_field">today\'s date</string>
+    <string name="expires_field">date expires</string>
 </resources>
