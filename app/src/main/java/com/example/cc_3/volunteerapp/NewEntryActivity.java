@@ -93,7 +93,7 @@ public class NewEntryActivity extends AppCompatActivity {
 
                 } else if (callingFragment == SportsFragment.class.getSimpleName()) {
 
-                    // TODO:
+                    childUpdates.put("/sports/" + key, commValues);
 
                 }
 

@@ -35,7 +35,7 @@ public class GrassrootsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_sports, container, false);
+        View rootView = inflater.inflate(R.layout.fragement_grassroots, container, false);
 
         mAddButton = (FloatingActionButton) rootView.findViewById(R.id.add_new_opportunity);
 

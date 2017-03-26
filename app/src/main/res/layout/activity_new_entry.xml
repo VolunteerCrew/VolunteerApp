@@ -88,11 +88,11 @@
             android:inputType="date"
             android:hint="@string/created_field"/>
 
-        <!-- This is for Created by Date -->
+        <!-- This is for Expires by Date -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/created_field"/>
+            android:text="@string/expires_field"/>
 
         <EditText
             android:layout_width="match_parent"
