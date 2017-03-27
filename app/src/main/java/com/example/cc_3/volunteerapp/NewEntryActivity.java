@@ -83,15 +83,15 @@ public class NewEntryActivity extends AppCompatActivity {
 
                 Map<String, Object> childUpdates = new HashMap<>();
 
-                if (callingFragment == OrganizationFragment.class.getSimpleName()) {
+                if ( callingFragment.equals(OrganizationFragment.class.getSimpleName()) ) {
 
                     childUpdates.put("/organization/" + key, commValues);
 
-                } else if (callingFragment == GrassrootsFragment.class.getSimpleName()) {
+                } else if ( callingFragment.equals(GrassrootsFragment.class.getSimpleName()) ) {
 
                     childUpdates.put("/grassroots/" + key, commValues);
 
-                } else if (callingFragment == SportsFragment.class.getSimpleName()) {
+                } else if ( callingFragment.equals(SportsFragment.class.getSimpleName()) ) {
 
                     childUpdates.put("/sports/" + key, commValues);
 
