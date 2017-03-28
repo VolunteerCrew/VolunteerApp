@@ -1,10 +1,10 @@
 package com.example.cc_3.volunteerapp;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +44,7 @@ public class GrassrootsFragment extends Fragment {
         mAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, mTitles);
         mList.setAdapter(mAdapter);
 
+
         mAddButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -58,6 +59,7 @@ public class GrassrootsFragment extends Fragment {
             }
 
         });
+
         return rootView;
 
     }
@@ -67,6 +69,7 @@ public class GrassrootsFragment extends Fragment {
         super.onStart();
 
         FirebaseDatabase database = ((MainActivity) getActivity()).mDatabase;
+
 
         database.getReference("grassroots").addValueEventListener(new ValueEventListener() {
             @Override
@@ -92,5 +95,6 @@ public class GrassrootsFragment extends Fragment {
 
             }
         });
+
     }
 }

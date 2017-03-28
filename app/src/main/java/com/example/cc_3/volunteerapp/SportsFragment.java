@@ -1,10 +1,10 @@
 package com.example.cc_3.volunteerapp;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +18,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by PM57M on 3/23/2017.
@@ -42,7 +41,7 @@ public class SportsFragment extends Fragment {
 
         mList = (ListView) rootView.findViewById(R.id.list);
         mTitles = new ArrayList<>();
-        mAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1);
+        mAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, mTitles);
         mList.setAdapter(mAdapter);
 
         mAddButton.setOnClickListener(new View.OnClickListener() {
@@ -81,10 +80,13 @@ public class SportsFragment extends Fragment {
                 // Iterate through the data then add it to the ArrayList
                 HashMap<String, Object> child;
                 for (DataSnapshot opportunity : opportunities) {
+
                     child = (HashMap<String, Object>) opportunity.getValue();
+
                     // Add
                     mTitles.add(child.get("title").toString());
                 }
+
                 // Then, because we zero'd out the data, we tell the Adapter the data has changed
                 mAdapter.notifyDataSetChanged();
             }
