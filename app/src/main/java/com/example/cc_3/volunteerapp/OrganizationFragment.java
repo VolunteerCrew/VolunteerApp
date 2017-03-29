@@ -29,7 +29,7 @@ public class OrganizationFragment extends Fragment {
 
     ListView mList;
     ArrayAdapter mAdapter;
-    ArrayList<String> mTitles;
+    ArrayList<OppDataModel> mOpportunities;
 
     @Nullable
     @Override
@@ -40,8 +40,8 @@ public class OrganizationFragment extends Fragment {
         mAddButton = (FloatingActionButton) rootView.findViewById(R.id.add_new_opportunity);
 
         mList = (ListView) rootView.findViewById(R.id.list);
-        mTitles = new ArrayList<>();
-        mAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, mTitles);
+        mOpportunities = new ArrayList<>();
+        mAdapter = new OppAdapter(getActivity(), mOpportunities);
         mList.setAdapter(mAdapter);
 
         mAddButton.setOnClickListener(new View.OnClickListener() {
@@ -77,17 +77,28 @@ public class OrganizationFragment extends Fragment {
                 Iterable<DataSnapshot> opportunities = dataSnapshot.getChildren();
 
                 // Just zero out all the old data
-                mTitles.clear();
+                mOpportunities.clear();
 
                 // Iterate through the iterable, and for each animal add them to the mAnimals
                 // ArrayList
                 HashMap<String, Object> child;
+                OppDataModel oppModel;
                 for (DataSnapshot opportunity : opportunities) {
 
                     child = (HashMap<String, Object>) opportunity.getValue();
 
+                    oppModel = new OppDataModel(
+                            child.get("sponsor").toString(),
+                            child.get("title").toString(),
+                            child.get("description").toString(),
+                            child.get("phoneNumber").toString(),
+                            child.get("address").toString(),
+                            child.get("dateCreated").toString(),
+                            child.get("dateExpires").toString()
+                    );
+
                     // Add
-                    mTitles.add(child.get("title").toString());
+                    mOpportunities.add(oppModel);
 
                 }
 
